@@ -1,0 +1,12 @@
+{
+  "name": "hw2-2",
+  "version": "0.0.1",
+  "description": "Homework 2.2",
+  "main": "hw2-2.js",
+  "dependencies": {
+    "mongodb": "1.4"
+  },
+  "author": "Daniel Brice",
+  "license": "BSD",
+  "private": true
+}

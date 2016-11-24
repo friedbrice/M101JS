@@ -1,0 +1,32 @@
+pipeline stages
+
+project - reshapes document, 1-to-1
+    remove, add, reshape keys
+    $toUpper
+    $toLower
+    $add
+    $multiply
+match - filters document, many-to-1
+    pre agg filter or
+    filter the results
+group - aggregates documents, use sum, count, etc, many-to-1
+    $sum - sum of values of a given array
+    $avg - avg value of a given array
+    $min - min value of a given key
+    $max - max value of a given key
+    $push - build array with values of a given key
+    $addToSet - build set with values of a given key
+    $first - first value it sees for a key
+    $last - last value it sees for a key
+sort - sorts documents, 1-to-1
+    disk and memory based
+    will try memory, if > 100 MB, then uses disk
+    before or after the grouping
+skip - cuts off the head, many-to-1
+    sort first
+    skip before limit
+limit - cuts off the tail, many-to-1
+    sort first
+    skip before limit
+unwind - normalizes documents, 1-to-many
+out - routes output to a collection instead of a cursor
